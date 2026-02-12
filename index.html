@@ -451,20 +451,26 @@
                 </div>
 
                 <div class="bg-slate-50 p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-2 border-brand-orange/5 shadow-inner" data-aos="fade-left">
-                    <form class="space-y-6 md:space-y-8">
+                    <form id="contact-form" action="https://formsubmit.co/idressalah155@gmail.com" method="POST" class="space-y-6 md:space-y-8">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="طلب خدمة جديد من الموقع">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="http://localhost:8000/#contact">
+                        
                         <div class="grid md:grid-cols-2 gap-6 md:gap-8">
                             <div class="space-y-2 md:space-y-3">
                                 <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-name">الاسم</label>
-                                <input type="text" id="form-name-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base">
+                                <input type="text" name="name" id="form-name-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base" required>
                             </div>
                             <div class="space-y-2 md:space-y-3">
                                 <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-phone">رقم الجوال</label>
-                                <input type="tel" placeholder="05xxxxxxxx" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base">
+                                <input type="tel" name="phone" id="form-phone-input" placeholder="05xxxxxxxx" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base" required>
                             </div>
                         </div>
                         <div class="space-y-2 md:space-y-3">
                             <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-service">نوع الخدمة المطلوبة</label>
-                            <select class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition appearance-none bg-white font-bold text-sm md:text-base">
+                            <select name="service" id="form-service-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition appearance-none bg-white font-bold text-sm md:text-base">
                                 <option data-i18n="opt-1">تطبيقات توصيل الطعام</option>
                                 <option data-i18n="opt-2">النقل بين المدن</option>
                                 <option data-i18n="opt-3">استشارات عامة</option>
@@ -472,7 +478,7 @@
                         </div>
                         <div class="space-y-2 md:space-y-3">
                             <label class="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest" data-i18n="form-msg">تفاصيل إضافية</label>
-                            <textarea rows="4" id="form-msg-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base"></textarea>
+                            <textarea rows="4" name="message" id="form-msg-input" class="input-focus-motion w-full px-5 md:px-6 py-3 md:py-4 rounded-xl md:rounded-2xl border-2 border-slate-100 outline-none focus:border-brand-orange transition shadow-sm font-bold text-sm md:text-base"></textarea>
                         </div>
                         <button type="submit" class="btn-orange btn-magnetic w-full py-4 md:py-6 rounded-xl md:rounded-2xl font-black text-xs md:text-sm uppercase tracking-widest shadow-2xl" data-i18n="form-btn">إرسال الطلب الآن</button>
                     </form>
@@ -486,7 +492,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12 mb-12 md:mb-16">
                 <div class="flex items-center gap-4 md:gap-6">
-                    <img src="assets/logo.png" alt="Logo" class="h-12 md:h-16 w-auto brightness-0 invert">
+                    <img src="assets/logo.png" alt="Logo" class="h-12 md:h-16 w-auto bg-white rounded-lg p-1">
                     <div>
                         <h4 class="font-black text-xl md:text-2xl leading-tight" data-i18n="nav-brand">إدريس صلاح</h4>
                         <p class="text-[8px] md:text-[10px] text-brand-orange font-bold uppercase tracking-[0.2em] md:tracking-[0.3em]" data-i18n="nav-sub">للخدمات والاستشارات اللوجستية</p>
